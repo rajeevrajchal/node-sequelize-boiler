@@ -1,0 +1,24 @@
+
+{
+  "development": {
+    "username": "postgres",
+    "password": "12345678",
+    "database": "befit_test_new",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "db-username",
+    "password": "db-password",
+    "database": "db-name",
+    "host": "127.0.0.1",
+    "dialect": "which-db"
+  },
+  "production": {
+    "username": "db-username",
+    "password": "db-password",
+    "database": "db-name",
+    "host": "127.0.0.1",
+    "dialect": "which-db"
+  }
+}
