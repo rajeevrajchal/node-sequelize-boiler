@@ -7,9 +7,9 @@ const {
     hashPassword,
     comparePassword,
     generateToken
-} = require('./Helpers/UserHelper');
+} = require('../Helpers/UserHelper');
 
-const {ErrorHandler} = require('./Helpers/Error');
+const {ErrorHandler} = require('../Helpers/Error');
 
 module.exports = {
 
@@ -23,13 +23,13 @@ module.exports = {
 
             //get work of validation field
             if (!email || !password) {
-                throw new ErrorHandler(400, "All Field Are Required")
+                throw new ErrorHandler(422, "All Field Are Required")
             }
 
             //get work of user verifying
             const userExist = await searchUser(email)
             if (userExist) {
-                throw new ErrorHandler(400, "User Already Exist")
+                throw new ErrorHandler(422, "User Already Exist")
             }
 
             //get work of password hashing
@@ -64,25 +64,25 @@ module.exports = {
 
             //get work of validation field
             if (!email || !password) {
-                throw new ErrorHandler(400, "All Field Are Required")
+                throw new ErrorHandler(422, "All Field Are Required")
             }
 
             //get work of user verifying
             const userExist = await searchUser(email)
             if (!userExist) {
-                throw new ErrorHandler(401, "Incorrect Credentials")
+                throw new ErrorHandler(422, "Incorrect Credentials")
             }
 
             //get work on password verification
             const isMatch = await comparePassword(password, userExist.password)
             if (!isMatch) {
-                throw new ErrorHandler(401, "Incorrect Credentials")
+                throw new ErrorHandler(422, "Incorrect Credentials")
             }
 
             //get work on generating token.
             const token = await generateToken(userExist)
             if (!token) {
-                throw new ErrorHandler(400, "Internal Server Error")
+                throw new ErrorHandler(500, "Internal Server Error")
             }
             return res.status(200).json({
                     token: token,

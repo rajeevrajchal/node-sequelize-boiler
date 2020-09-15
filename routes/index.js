@@ -1,4 +1,4 @@
-const { handleError } = require('../controllers/Helpers/Error');
+const { handleError } = require('../Helpers/Error');
 
 module.exports = (app) => {
 

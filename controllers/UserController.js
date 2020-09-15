@@ -1,4 +1,4 @@
-const {ErrorHandler} = require('./Helpers/Error');
+const {ErrorHandler} = require('../Helpers/Error');
 
 const User = require('../models').User;
 
@@ -18,7 +18,7 @@ module.exports = {
                 }
             ).catch(
                 error => {
-                    next(new ErrorHandler(404, error.errors[0].message))
+                    next(new ErrorHandler(422, error.errors[0].message))
                 }
             )
         } catch (error) {
@@ -33,7 +33,7 @@ module.exports = {
             User.findByPk(userId).then(
                 result => {
                     if (!result) {
-                        next(new ErrorHandler(404, "User doesn't exist"))
+                        next(new ErrorHandler(422, "User doesn't exist"))
                     }
                     return res.status(200).json({
                         data: result,
@@ -42,7 +42,7 @@ module.exports = {
                 }
             ).catch(
                 error => {
-                    next(new ErrorHandler(404, error.errors[0].message))
+                    next(new ErrorHandler(422, error.errors[0].message))
                 }
             )
         } catch

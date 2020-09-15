@@ -1,6 +1,6 @@
 
 //model import
-const User = require('../../models').User;
+const User = require('../models').User;
 
 //packages
 // jwt and bcrypt are use as the logic of authentication, you can change on your own.
@@ -9,7 +9,6 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 // jwt and bcrypt are use as the logic of authentication, you can change on your own.
-
 module.exports = {
 
     //search users
