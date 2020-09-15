@@ -3,7 +3,7 @@
 /.pnp
 /.env
 /.idea
-/.config
+/config
 .pnp.js
 
 # testing
