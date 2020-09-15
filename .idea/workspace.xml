@@ -11,6 +11,7 @@
     <list default="true" id="a2cab6d3-dded-47d3-8665-9317cb8ff480" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/middleware/auth/permissionUser.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/middleware/auth/validateUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AuthController.js" afterDir="false" />
@@ -65,7 +66,7 @@
       <workItem from="1598942141541" duration="2410000" />
       <workItem from="1598961843074" duration="3135000" />
       <workItem from="1598966071433" duration="3031000" />
-      <workItem from="1600143589887" duration="1003000" />
+      <workItem from="1600143589887" duration="1350000" />
     </task>
     <servers />
   </component>

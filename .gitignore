@@ -2,7 +2,8 @@
 /node_modules
 /.pnp
 /.env
-/.config/config.json
+/.idea
+/.config
 .pnp.js
 
 # testing
